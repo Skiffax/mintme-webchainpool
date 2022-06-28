@@ -1,0 +1,13 @@
+[Unit]
+Description=Webchain-pool-api
+After=network.target
+
+[Service]
+Type=simple
+User=webchain
+Group=webchain
+ExecStart=/home/webchain/webchain-pool/build/bin/webchain-pool /home/webchain/webchain-pool/config-api.json
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

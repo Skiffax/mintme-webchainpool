@@ -1,0 +1,13 @@
+[Unit]
+Description=Webchaind
+After=network.target
+
+[Service]
+Type=simple
+User=webchain
+Group=webchain
+ExecStart=/home/webchain/webchaind --rpc --rpcaddr 127.0.0.1 --unlock '0xfb24f18f1746f8a82d35ce9354e8fba40b0bac19' --password /home/webchain/wallet.pass
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
