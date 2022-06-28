@@ -1,5 +1,10 @@
 #Dockerfile to webchain-pool
 #made by Skiff (skiffax)
+#version: 33
+#
+#run container with next instructions:
+#sudo docker run -p 80:80 -p 8080:8080 -p 39573:39573 -p 68:68 -p 31140:31140 -d --name skiffcontainer1.33.3 --privileged=true -v /sys/fs/cgroup:/sys/fs/cgroup:ro skiffdocker:1.33 /sbin/init && /home/webchain/geth --mintme
+
 FROM jrei/systemd-debian:latest
 
 ENV HOME="/home/webchain"
